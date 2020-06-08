@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.PlanPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="BTN_Day1"
+                    Text="First Day"
+                    Clicked="BTN_Day1_Clicked"/>
+            
+            <Button x:Name="BTN_Day2"
+                    Text="Second Day"
+                    Clicked="BTN_Day2_Clicked"/>
+            
+            <Button x:Name="BTN_Day3"
+                    Text="Third Day"
+                    Clicked="BTN_Day3_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

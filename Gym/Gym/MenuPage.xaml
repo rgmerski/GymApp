@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.MenuPage"
+             BackgroundColor="DarkKhaki"
+             >
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" >
+            <Button x:Name="BTN_Start" 
+                Text="Start"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                FontAttributes="Bold"
+                Clicked="BTN_Start_Clicked"
+                />
+            <Button x:Name="BTN_Profile"    
+                Text="Profile"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="200"
+                FontAttributes="Bold"
+                Clicked="BTN_Profile_Clicked"
+                />
+            <Button x:Name="BTN_Exercises"
+                Text="Exercises"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="200"
+                FontAttributes="Bold"
+                Clicked="BTN_Exercises_Clicked"
+                />
+            <Button x:Name="BTN_Plan"
+                Text="Training Plan"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="200"
+                FontAttributes="Bold"
+                Clicked="BTN_Plan_Clicked"
+                />
+            <Button x:Name="BTN_Author"
+                Text="Author"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="200"
+                FontAttributes="Bold"
+                Clicked="BTN_Author_Clicked"
+                />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

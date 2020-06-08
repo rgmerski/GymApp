@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.ExercisePage">
+    <StackLayout>
+        <Grid>
+            <Button Grid.Column="1" x:Name="BTN_Add"
+                    Text="Dodaj [DEV]"
+                    Clicked="BTN_Add_Clicked"
+            />
+            <Button Grid.Column="2" x:Name="BTN_Pop"
+                    Text="Stworz baze [DEV]"
+                    Clicked="BTN_Pop_Clicked"/>
+            <Button Grid.Column="3" x:Name="BTN_Del"
+                    Text="Usun baze [DEV]"
+                    Clicked="BTN_Del_Clicked"
+                    />
+        </Grid>
+       
+            
+        
+        <ListView x:Name="listView"
+                  ItemSelected="ListView_ItemSelected"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Label Text="{Binding Name}"/>
+                            <Label Grid.Column="1" Text="{Binding Muscles}" />
+                            <Label Grid.Column="2" Text="{Binding Equipment}"  />
+                            <Label Grid.Column="3" Text="{Binding Potok}"/>
+                            <Label Grid.Column="4" Text="{Binding Type}"  />
+                            <!--<Label Grid.Column="5" Text="{Binding Link}" HorizontalTextAlignment="End" />-->
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

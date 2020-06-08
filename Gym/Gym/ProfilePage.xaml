@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.ProfilePage"
+             BackgroundColor="BurlyWood">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label HorizontalOptions="Center"
+                Text="Profile"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   />
+            <Editor x:Name="edit_name"
+                    FontSize="15"
+                Placeholder="Enter your name"
+                HeightRequest="40"
+                />
+            <Editor x:Name="edit_age"
+                    FontSize="15"
+                Placeholder="Enter your age"
+                HeightRequest="40"
+                />
+            <Editor x:Name="edit_weight"
+                    FontSize="15"
+                Placeholder="Enter your weight"
+                HeightRequest="40"
+                />
+            <Picker Title="Training type" 
+                    FontSize="15"
+                    x:Name="PCK_Train"
+                    SelectedIndexChanged="PCK_Train_SelectedIndexChanged"
+                    >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cardio</x:String>
+                        <x:String>Str</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                
+            </Picker>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BTN_Update"
+                        Text="Update"
+                        Clicked="BTN_Update_Clicked"
+                     />
+                <Button Grid.Column="1"  Text="Save" x:Name="BTN_Save"
+                        Clicked="BTN_Save_Clicked"
+                    />
+                <Button Grid.Column="2"   x:Name="BTN_Del"
+                    Text="Delete"
+                        Clicked="BTN_Del_Clicked"
+                    />
+
+            </Grid>
+            <Grid>
+                <Button x:Name="BTN_Plan"
+                    Text="Create plan"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Clicked="BTN_Plan_Clicked"/>
+                <Button x:Name="BTN_Plan_Del" Grid.Column="1"
+                    Text="Delete plan"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Clicked="BTN_Plan_Del_Clicked"/>
+            </Grid>
+            
+            <Label x:Name="test"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

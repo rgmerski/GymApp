@@ -1,14 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Gym"
              x:Class="Gym.MainPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="BTN_1"
+                    Text="First day"
+                    Clicked="BTN_1_Clicked"
+                    />
+                <Button Grid.Column="1" x:Name="BTN_2"
+                    Text="Second day"
+                    Clicked="BTN_2_Clicked"
+                    />
+                <Button Grid.Column="2" x:Name="BTN_3"
+                    Text="Third day"
+                    Clicked="BTN_3_Clicked"
+                    />
+            </Grid>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+            <Label x:Name="Exer_name" HorizontalOptions="Center"
+                   BackgroundColor="Gray"/>
+            <!--<Label x:Name="Link">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="Blue"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                                      />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>-->
 
+            <Button x:Name="Link_BTN" HorizontalOptions="Center" HeightRequest="50" WidthRequest="120" VerticalOptions="End"
+                    Text="Link to watch exercise"
+                    Clicked="Link_BTN_Clicked"/>
+
+            <Editor x:Name="Timer_ed" HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                   FontSize="14"
+                    Placeholder="Length of the break"/>
+
+            <Label x:Name="Timer" HorizontalOptions="Center"
+                   BackgroundColor="DarkGreen" WidthRequest="120" 
+                   HorizontalTextAlignment="Center"
+                   Text="0"/>
+
+            <!--<Grid>
+                <Button Grid.Column="0" Text="Start" x:Name="BTN_Timer_Start"
+                        WidthRequest="70"
+                        Clicked="BTN_Timer_Start_Clicked"
+                        />
+                <Button Grid.Column="1"
+                        x:Name="BTN_Timer_Pause"
+                        Text="||"
+                        Clicked="BTN_Timer_Pause_Clicked"
+                       />
+                <Button Grid.Column="2"
+                        x:Name="BTN_Timer_Reset" 
+                        Text="Reset"
+                        Clicked="BTN_Timer_Pause_Clicked"
+                       />
+            </Grid>-->
+
+            <Button x:Name="BTN_Timer" HorizontalOptions="Center" 
+                    WidthRequest="40"  Text="||"
+                    Clicked="BTN_Timer_Clicked"
+                       />
+
+            <Button x:Name="Next_BTN" HorizontalOptions="Center" 
+                    WidthRequest="120" 
+                    Text="Next exercise"
+                    Clicked="Next_BTN_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
